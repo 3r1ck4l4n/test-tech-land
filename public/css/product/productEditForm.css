@@ -1,0 +1,223 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+  text-decoration: none;
+  font-size: 18px;
+  color: rgb(225, 48, 108);
+}
+
+ul.service-options {
+  background: linear-gradient(
+    237deg,
+    rgba(140, 5, 99, 1) 0%,
+    rgba(225, 48, 108, 1) 50%,
+    rgba(50, 108, 144, 1) 100%
+  ) !important;
+}
+
+ul.service-options li a:hover{
+  background: linear-gradient(
+    237deg,
+    rgba(140, 5, 99, 1) 0%,
+    rgba(225, 48, 108, 1) 50%,
+    rgba(50, 108, 144, 1) 100%
+  ) !important;
+}
+
+body {
+  background: linear-gradient(
+    237deg,
+    rgba(140, 5, 99, 1) 0%,
+    rgba(225, 48, 108, 1) 50%,
+    rgba(50, 108, 144, 1) 100%
+  );
+  transition: all 800ms;
+}
+form div label {
+  display: block;
+}
+
+#preview {
+  border: 1px solid #ddd;
+  padding: 5px;
+  background: #fff;
+  width: 250px;
+  height: 150px;
+  margin: 10px auto;
+}
+
+#preview img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: auto;
+}
+.title-form {
+  font-size: 1.3rem;
+  text-align: left;
+  margin: auto;
+  color: rgba(225, 48, 108, 1);
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+.form-container {
+  max-width: 90%;
+  max-height: 900px;
+  padding: 1%;
+  margin: 80px auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  box-shadow: 0px 0px 10px black;
+  transition: all 450ms;
+  border-radius: 5px;
+}
+
+.fa-pencil-alt {
+  display: block;
+  padding: 8px;
+  width: 55px;
+  height: 55px;
+  margin: auto;
+  color: #fff;
+  background-color: rgba(225, 48, 108, 1);
+  border-radius: 50%;
+  position: absolute;
+  right: -20px;
+  top: 15px;
+}
+.form-container form {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  transition: all 450ms;
+}
+
+.form-input label {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.form-input input,
+.form-input textarea,
+.form-input select {
+  margin: auto auto auto 5%;
+  margin-top: 5px;
+  width: 90%;
+  border: none;
+  border-bottom: black solid 1px;
+  color: darkgray;
+  transition: all 450ms;
+}
+.form-input select option {
+  color: black;
+}
+
+.form-input {
+  width: 90%;
+  margin: 10px auto 10px auto;
+}
+.form-button {
+  margin: auto;
+  margin-top: 20px;
+  width: 80%;
+}
+
+.button-form {
+  width: 100% !important;
+  color: #fff;
+  padding: 10px;
+  background-color: rgba(225, 48, 108, 1);
+  border-radius: 10px;
+}
+
+.form-input input:focus-within,
+.form-input textarea:focus-within,
+.form-input select:focus-within {
+  width: 100%;
+  color: black;
+  margin: auto;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: rgba(50, 108, 144, 1) solid 2px !important;
+  box-shadow: 0px 0px 10px rgb(225, 48, 108);
+  outline: none;
+}
+
+@media (min-width: 769px) {
+  body {
+    background: rgba(225, 48, 108, 0.5) !important;
+    transition: all 450ms;
+  }
+
+  .column {
+    margin-left: 10px;
+  }
+  .form-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 80%;
+    padding: 0;
+    transition: all 450ms;
+  }
+
+  .form-container form {
+    margin-top: 50px;
+  }
+
+  .title-form {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  #preview {
+    width: 20vw;
+    height: 40vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .form-container {
+    background: linear-gradient(
+      0deg,
+      rgba(192, 148, 233, 0.5) 0%,
+      rgba(247, 248, 250, 0.938) 100%
+    );
+
+    width: 70%;
+  }
+  #preview {
+    height: 50vh;
+    width: 30vw;
+  }
+  ul.service-options {
+    background: linear-gradient(
+      167deg,
+      rgba(192, 148, 233, 0.5) 0%,
+      rgba(247, 248, 250, 0.938) 100%
+    )!important;
+  }
+  
+  ul.service-options li a:hover{
+    background: linear-gradient(
+      167deg,
+      rgba(192, 148, 233, 0.5) 0%,
+      rgba(247, 248, 250, 0.938) 100%
+    ) !important;
+  }
+
+  .form-input input,
+  .form-input textarea,
+  .form-input select {
+    margin: auto;
+  }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head") %>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
+      rel="stylesheet"
+    />    
+    <link href="/css/normalize.css" rel="stylesheet" />    
+    <link href="/css/home/formStyles.css" rel=stylesheet> 
+    <link href="/css/loginStyles.css" rel="stylesheet" />    
+    <title>Iniciar sesión</title>
+  </head>
+  <body>
+    <!-- <header>
+        <article>
+            <img src="/images/TechLAnd2White.png" alt="logo de la empresa" class="logo">
+            <div class="lines">
+                <div class="line-first"></div>
+                <div class="line-second"></div>
+                <div class="line-third"></div>
+            </div>
+            <div class="input-search">
+                <input type="text" class="search" id="fname" name="fname" placeholder="Buscar..." > 
+                <button class="button-search"><i class="fas fa-search"></i></button>
+            </div>
+        </article>
+
+        <section>
+            <div class="lines">
+                <div class="line-first"></div>
+                <div class="line-second"></div>
+                <div class="line-third"></div>
+            </div>
+            <-- <article class="circle">
+                <div class="circle-one"><i class="fas fa-circle-notch"></i></div>
+                <div class="circle-second"><i class="fas fa-circle-notch"></i></div>
+                <div class="circle-third"><i class="fas fa-circle-notch"></i></div>
+            </article> -->
+    <!-- </section>
+
+        <nav class="header-nav">
+            <ul class="tabs">
+                <li><a href="#" class="firsttab">Novedades</a></li>
+                <li><a href="#" class="secondtab">Productos destacados</a></li>
+                <li><a href="#" class="thirdtab">Favoritos</a></li>
+            </ul>
+            <ul class="user-options">
+                <li><button >Login</button></li>
+                <li><button>Sign Up</button></li>
+            </ul>
+        </nav>
+    
+        <div class="container-barMenu">
+            <i class="fas fa-bars barMenu fa-lg"></i>
+        </div>
+    </header> -->
+
+    <header>
+      <%- include('../partials/header')%> 
+    </header>
+
+    <main>
+      <article class="tabs">
+        <div class="register">
+          <a href="/users/register" class="register-tab">¡Regístrate!</a>
+        </div>
+        <div class="login">
+          <a href="/users/login" class="login-tab">Ingresa a tu cuenta</a>
+        </div>
+      </article>
+      <section>
+        <h1>Iniciar sesión</h1>
+        <form action="/users/login" method="POST">
+          <div>
+            <input
+              size="20px"
+              type="text"
+              class="input"
+              id="fname"
+              name="email"
+              placeholder="  Email"
+              required
+              minlength="8"
+              value="<%= locals.errors && oldData ? oldData.email : null %>"
+            />
+            <% if(locals.errors && errors.email){ %>
+              <p class="errors">
+                <%= errors.email.msg %>
+              </p>
+            <% } %>
+          </div>
+          <div>
+            <input
+              size="20px"
+              type="password"
+              class="input"
+              id="fname"
+              name="password"
+              placeholder="  Contraseña"
+              required
+              minlength="8"
+              pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
+            />
+            <% if(locals.errors && errors.password){ %>
+              <p class="errors">
+                <%= errors.password.msg %>
+              </p>
+            <% } %>
+          </div>
+          <div class="check">
+            <input type="checkbox" class="checkbox" name="rememberMe"/> ¿Desea guardar su
+            contraseña?
+          </div>
+          <button type="submit" class="register-button">Ingresar</button>
+        </form>
+      </section>
+      <div class="forget"><a href="#">¿Olvidaste tu contraseña?</a></div>
+    </main>
+
+    <%- include('../partials/footer')%>
+    <!-- <footer>
+        <div class="social-networks">
+        <i class="fab fa-instagram fa-3x"></i>
+        <i class="fab fa-facebook fa-3x"></i>
+        <i class="fab fa-whatsapp fa-3x"></i> 
+        </div>
+        <nav>
+            <ul class="navbar">
+                <li><a href="#">Conócenos</a></li>
+                <li><a href="#">Cuenta</a></li>
+                <li><a href="#">Mi pedido</a></li>
+            </ul>
+        
+            <img src="/images/TechLand2White.png" class="logo" alt="logo de la empresa">
+        
+            <ul class="navbar">
+                <li><a href="#">Contáctanos</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Ayuda e información</a></li>
+            </ul>
+        </nav>  
+    </footer> -->
+  </body>
+</html>

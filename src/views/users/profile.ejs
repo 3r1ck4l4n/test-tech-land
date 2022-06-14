@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head") %>    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="/css/profileStyles.css">
+    <title>Mi cuenta</title>    
+  </head>
+  
+
+<body>
+  <header>
+      <%- include('../partials/header')%>
+  </header>
+
+    <main>
+        <section class="main-section-user">
+            
+            <section class="first-section-image">
+                <div class="image-user">
+              <img src="<%= user.profileImage %>" alt="profileImage">
+                </div>
+            </section>
+
+            <section class="second-section-data-menu">
+                <div class="data">
+                    <header class="user-name"><%= user.user %></header>
+                    <div class="user-email">
+                        <p>(<%= user.email %>)</p>
+                    </div>
+                    <div class="user-country">
+                        <p>
+                            <%= user.nationality %>
+                        </p>
+                    </div>
+                </div> 
+                <div class="user-menu">
+                    <header class="menu">¿Qué te gustaría hacer?</header>
+                    <div class="first-menu">                       
+                            <a href="#" class="items-bought">Ver mis pedidos</a>
+                            <a href="/productCart" class="car">Ir al carrito</a>
+                            <a href="/home" class="back-to-store">Volver a la tienda</a>                        
+                    </div>
+                    
+                    <div class="second-menu">
+                        <div class="editing">
+                            <a href="/users/edit/">
+                                <button>Editar usuario</button>
+                            </a>
+                        </div>
+
+                        <form action="/users/delete/#?_method=DELETE" method="POST" style="display: inline-flex">
+                            <button type="submit" class="action-button delete">Eliminar usuario</button> 
+                        </form>     
+                    </div>      
+                    
+
+                </div>  
+
+            </section>           
+        </section>     
+    </main>
+
+    <%- include('../partials/footer')%>
+    
+</body>
+</html>

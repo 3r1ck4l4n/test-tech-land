@@ -1,0 +1,284 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+/* make difference from the home styles*/
+
+
+main {
+    width: 90vw;
+    margin: auto;
+        
+  }
+  
+  .banner img{
+      width: 100%;
+  }
+
+
+/**/
+
+body{    
+    font-family: 'Roboto', sans-serif;
+    /* font-size: 12px;
+    font-weight: 400; */
+    color: black;
+}
+main{
+    width: 90vw;
+    margin: auto;
+}
+
+.top{ 
+    padding-bottom: 8px;
+    border-bottom: 1px solid #64b3f4;
+}
+
+h1{
+    font-size: 24px;     
+    margin-top: 16px;  
+}
+
+.subtotal{
+    display: flex;
+    align-items: center;
+}
+
+.sub-name{
+    font-size: 18px;
+    font-weight: 700;  
+    width: 60%;
+    padding: 4px;
+    text-align: right; 
+}
+
+.sub-number{
+    font-size: 18px;
+    width: 40%;
+    padding: 4px;
+    text-align: left;    
+}
+
+
+.pay-button button{
+    font-size: 16px;
+    width: 80%;
+    padding: 8px;  
+    border-radius: 8px;  
+    border-width: 0px;        
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.pay-button{
+    text-align: center;
+}
+
+.label-price{
+    display: none;    
+}
+
+
+.to-pay-desktop{
+    display: none;
+}
+
+.list-of-items-to-pay{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.product-card{
+    margin-top: 8px;
+   
+    padding-top: 8px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #64b3f4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+
+.product-img{
+    width: 100%;
+}
+
+
+.buttoms-and-price{
+    display: flex;
+    align-items: baseline;      
+}
+
+.product-price-mobile{       
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+}
+
+.product-price-mobile p{
+    font-size: 14px;
+}
+
+.name-price{
+    padding: 4px;
+}
+
+.number-price{
+    padding: 4px;
+
+}
+
+.product-name{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.number-of-items{
+    display: flex;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 150px;    
+}
+
+.number-of-items button{
+    height: 28px;
+    width: 28px;
+}
+
+.number-of-items p{
+    width: 86px;
+    text-align: center;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.trash button{
+    width: 28px;
+    height: 28px;
+}
+
+
+
+.product-price-desktop{
+    display: none;
+}
+
+.to-pay{
+    border: 1px solid #64b3f4;
+    margin-top: 16px;
+}
+
+.to-pay p{
+    font-size: 14px;
+}
+
+.subtotal-to-pay{
+    display: flex;
+    align-items: center;    
+}
+
+.name-to-pay{
+   width: 60%;
+   padding: 4px;
+   text-align: right;
+}
+
+.number-to-pay{
+    width: 40%;
+    padding: 4px;
+    text-align: left;
+}
+
+.shipping{
+    display: flex;
+    align-items: center;
+}
+
+.total{
+    display: flex;
+    align-items: center;
+}
+
+.total .name-to-pay{
+    font-weight: 700;
+}
+
+@media (min-width:769px){
+
+    .top{
+        width: 60%;
+    }
+
+    .top .subtotal,
+    .top .pay-button{
+        display: none;
+    }
+
+    .top .label-price{
+        display: block;       
+        text-align: right;
+    }
+    .label-price p{
+        margin-bottom: 0px;
+    }
+
+    .list-of-p-and-pay{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .list-of-p-and-pay-one{
+        width: 60%;
+    }
+
+    .to-pay-desktop{
+        display: block;
+        width: 30%;
+        height: 40%;
+        border: 1px solid #64b3f4;
+        margin-top: 16px;
+    }
+
+        
+    .to-pay-desktop p{
+        font-size: 14px;
+    }
+
+    .product-card{        
+        flex-direction: row;        
+    }
+    
+    .product-img{
+        width: 30%;
+    }
+    
+    .product-name{
+        margin-top: 8px;
+        
+    }
+    
+    
+    .product-price-mobile{
+        display: none;
+    }
+
+    .product-price-desktop{
+        display: block;
+    }
+
+    .number-price{
+        font-size: 14px;
+        margin-top: 8px;
+    }
+
+   
+
+
+}

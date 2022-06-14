@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include("../partials/head") %>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/productDetailStyles.css">
+        <link rel="stylesheet" href="/css/productCartStyles.css">
+        <title>ProductCart</title>       
+    </head>
+
+
+<body>
+    <header>
+        <%- include('../partials/header')%>
+    </header>
+
+
+    <main>
+        <section class="top">
+            <h1 class="main-title">
+                Mi carrito de compras
+            </h1>
+    
+            <div class="subtotal">
+                <p class="sub-name">
+                    Subtotal:
+                </p>
+                <p class="sub-number">
+                    $ 000.00
+                </p>
+            </div>
+    
+            <div class="pay-button">
+                <button>
+                    Pagar
+                </button>
+            </div>     
+            
+            <div class="label-price">
+                <p>
+                    Precio
+                </p>
+            </div>
+        </section>       
+    
+        <section class="list-of-p-and-pay">
+
+            <section class="list-of-p-and-pay-one">
+                <section class="list-of-items-to-pay">
+
+                    <%responseCar.forEach(item=>{%>
+                    <div class="product-card">
+                        <img src="<%=item.product.img%>" alt="product-image" class="product-img">
+                        
+                        <div class="name-buttoms-product">
+                            <p class="product-name">
+                                <%=item.product.name%>
+                            </p>
+
+                            <div class="buttoms-and-price">
+                                <div class="buttons-for-#-items">
+                                    <div class="number-of-items">
+                                        <button>
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <p>
+                                            1
+                                        </p>
+                                        <button>
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                        
+                                    <div class="trash">
+                                        <button>
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>                                                        
+                                </div>
+
+                                <div class="product-price-mobile"> 
+                                    <p class="name-price">
+                                        Precio:
+                                    </p>                                                                                                  
+                                    <p class="number-price">
+                                        $ 000.00
+                                    </p>
+                                </div>
+                            </div>
+    
+                                                       
+                        </div>
+
+                        <div class="product-price-desktop">                            
+                            <p class="number-price">
+                                $ 000.00
+                            </p>
+                        </div>
+                        
+
+                    </div>
+                    <%});%>
+
+    
+                </section>
+    
+                <section class="to-pay">
+                    <div class="subtotal-to-pay">
+                        <p class="name-to-pay">
+                            Subtotal:
+                        </p>
+                        <p class="number-to-pay">
+                            $ 000.00
+                        </p>
+                    </div>
+                    <div class="shipping">
+                        <p class="name-to-pay">
+                            Envío:
+                        </p>
+                        <p class="number-to-pay">
+                            $ 000.00
+                        </p>
+                    </div>
+                    <div class="total">
+                        <p class="name-to-pay">
+                            Total:
+                        </p>
+                        <p class="number-to-pay">
+                            $ 000.00
+                        </p>
+                    </div>
+        
+                    <div class="pay-button">
+                        <button>
+                            Pagar
+                        </button>
+                    </div>   
+                </section>
+            </section>
+
+            
+            
+    
+            <section class="to-pay-desktop">
+                <div class="subtotal-to-pay">
+                    <p class="name-to-pay">
+                        Subtotal:
+                    </p>
+                    <p class="number-to-pay">
+                        $ 000.00
+                    </p>
+                </div>
+                <div class="shipping">
+                    <p class="name-to-pay">
+                        Envío:
+                    </p>
+                    <p class="number-to-pay">
+                        $ 000.00
+                    </p>
+                </div>
+                <div class="total">
+                    <p class="name-to-pay">
+                        Total:
+                    </p>
+                    <p class="number-to-pay">
+                        $ 000.00
+                    </p>
+                </div>
+    
+                <div class="pay-button">
+                    <button>
+                        Pagar
+                    </button>
+                </div>   
+            </section>
+    
+        </section>
+    
+        
+    </main>
+    
+    <%- include('../partials/footer')%>  
+    
+</body>
+</html>

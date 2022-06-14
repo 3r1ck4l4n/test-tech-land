@@ -1,0 +1,16 @@
+<section class="other-products">
+    <h2 class="title">
+        Otros clientes también compraron
+    </h2>
+    <div class="list-of-products">
+        <% products.forEach(product => { if(product.type == "Destacados"){ %>
+        <div class="mini-product-card">
+            <a href="/products/detail/<%= product.id %>">
+                <img src="<%= product.img %>" alt="product-picture">
+                <p class="mini-name"><%= product.name %></p>
+                <p class="mini-price">$ <%= product.price %></p>
+            </a>
+        </div>
+        <% }}) %>                 
+    </div>
+</section>

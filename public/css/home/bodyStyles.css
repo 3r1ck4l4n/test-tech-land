@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  color: black;
+  font-family: "Roboto Mono", monospace;
+}
+
+ul{
+  margin: 0 !important;
+}
+body {
+  margin-bottom: 408px;
+  background-color: white !important;
+}
+
+.carousel-item img{
+ max-width: 1200px;
+ max-height: 800px;
+ margin: auto;
+}
+
+
+main {
+  margin: 10px;
+}
+
+main section {
+  margin-top: 30px;
+}
+
+div.banner {
+  display: flex;
+}
+
+div.banner img {
+  width: 100%;
+}
+
+.firstContent {
+  padding: 15px 0 15px 0;
+}
+.firstContent .promotionalProducts {
+  margin-top: 30px;
+}
+
+.titleItem{
+  color: black !important;
+}
+
+.itemImage {
+  max-width: 80%;
+  margin: 10%;
+  width: auto;
+  height: auto;
+}
+
+p.recommendations a,
+p.moreOffers a {
+  color: #6e3667 !important;
+}
+p.recommendations,
+p.moreOffers,
+p.discount,
+p.price {
+  margin-top: 10px;
+  display: flex;
+}
+
+p.discount,
+p.price {
+  color: #1a0315 !important;
+}
+.img-short {
+  margin-bottom: 60px;
+  margin-top: 10px;
+}
+
+.titleMain {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  border-top: #88d317 solid 2px;
+  color: black;
+  text-align: center;
+}
+
+.Item {
+  margin: 10px auto 10px auto;
+  width: 80%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  transition: box-shadow 450ms;
+}
+
+.Item:hover {
+  box-shadow: 2px 2px 5px 5px #88d317;
+}
+
+@media (min-width: 560px) {
+  .Item {
+    width: 40%;
+    font-size: 1.1em;
+  }
+
+  .specifications {
+    margin-top: 10px;
+    padding: 10px;
+  }
+  .featuredProducts,
+  .promotionalProducts {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    margin-bottom: 270px;
+  }
+}
+
+@media (min-width: 1028px) {
+  .Item {
+    width: 22%;
+  }
+
+  .tech-land-logo {
+    width: 200px;
+    height: 25px;
+  }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/product/productEditForm.css" />
+    <%- include("../partials/head") %>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script async src="/js/preview.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('../partials/header')%>
+   
+      <div class="form-container">
+        <i class="fas fa-pencil-alt fa-2x"></i>
+        <div class="column">
+          <div class="title-form"> Editar productos </div>
+          <div id="preview"></div>
+        </div>
+        <form action="/products/edit/<%= item.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+          <div class="form-input">
+            <label for="name">Nombre del Producto</label>
+            <input type="text" name="name" id="name" value="<%=item.name%>" required/>
+          </div>
+          <div class="form-input">
+            <label for="description">Descripción</label>
+            <textarea name="description" id="description" cols="3"  required><%=item.description%></textarea>
+          </div>
+          <div class="form-input">
+            <label for="product-image">Imagen del producto</label>
+            <input type="file" name="product-image" id="file" value="<%=item.img%>" required/>
+          </div>
+          <div class="form-input">
+            <label for="category">Categoría</label>
+            <select name="category" id="category" required>
+              <option value="<%=item.category%>" selected><%=item.category%></option>
+              <option value="Perifericos">Perifericos</option>
+              <option value="Equipos de computo">Equipos de computo</option>
+              <option value="Laptops">Laptops</option>
+              <option value="Monitores">Monitores</option>
+              <option value="Procesadores">Procesadores</option>
+              <option value="Tarjetas madre">Tarjetas Madre</option>
+              <option value="Darjetas de video">Tarjetas de video</option>
+              <option value="Disipadores y enfriamiento">
+                Disipadores y Enfriamiento
+              </option>
+              <option value="PC Gamer">PC Gamer</option>
+              <option value="Almacenamiento">Almacenamiento</option>
+              <option value="Memorias">Memorias</option>
+              <option value="Otra">Otra</option>
+            </select>
+          </div>
+          <div class="form-input">
+            <label for="brand">Marca</label>
+            <select name="brand" id="brand" required>
+              <option value="<%=item.brand%>" selected><%=item.brand%></option>
+              <option value="Acer">Acer</option>
+              <option value="Adata">Adata</option>
+              <option value="AlienWare">AlienWare</option>
+              <option value="AMD">AMD</option>
+              <option value="Aorus">Aorus</option>
+              <option value="Apple">Apple</option>
+              <option value="Asus">Asus</option>
+              <option value="Dell">Dell</option>
+              <option value="EVGA">EVGA</option>
+              <option value="Gigabyte">Gigabyte</option>
+              <option value="HP">HP</option>
+              <option value="Huawei">Huawei</option>
+              <option value="HyperX">HyperX</option>
+              <option value="Intel">Intel</option>
+              <option value="Kingston">Kingston</option>
+              <option value="Lenovo">Lenovo</option>
+              <option value="MSI">MSI</option>
+              <option value="Nvidia">Nvidia</option>
+              <option value="Samsung">Samsung</option>
+              <option value="Sony">Sony</option>
+              <option value="Otra">Otra</option>
+            </select>
+          </div>
+          <div class="form-input">
+            <label for="price">Precio</label>
+            <input type="number" name="price" id="price" value="<%=item.price%>" required />
+          </div>
+          <div class="form-input">
+            <label for="type">Tipo: </label>
+            <select name="type" id="type"> 
+              <option value="<%=item.type%>" selected><%=item.type%></option>             
+              <option value="Destacados">Destacados</option>
+              <option value="Agregados recientemente">Agregados recientemente</option>
+              <option value="Más vendidos">Más vendidos</option>
+              <option value="En oferta">En oferta</option>
+            </select>
+          </div>
+          <div class="form-button"> 
+            <button type="submit" class="button-form">Editar</button>
+          </div>
+        </form>
+      </div>
+    
+
+    <%- include('../partials/footer')%>
+  </body>
+</html>

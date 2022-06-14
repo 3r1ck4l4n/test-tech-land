@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head") %>    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/productDetailStyles.css">
+    <title>Detalle</title>    
+  </head>
+  
+
+<body>
+  <header>
+      <%- include('../partials/header')%>
+  </header>
+
+    <main>
+        <section class="main-section-product">
+            <header class="product-name"><h1><%=item.name%></h1></header>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <main class="product-card">                
+               
+                <div class="image-product">
+              <img src="<%=item.img%>" alt="product-preview">
+                </div>
+                
+                <div class="product-card-2nd-box">
+                    <div class="main-features">                  
+                        <div class="icon-main-feature">
+                          <i class="fas fa-memory"></i>
+                            <p>A main feature</p>
+                        </div>    
+                        <div class="icon-main-feature">
+                            <i class="fas fa-memory"></i>
+                              <p>A main feature</p>
+                        </div>
+                        <div class="icon-main-feature">
+                          <i class="fas fa-memory"></i>
+                            <p>A main feature</p>
+                        </div>
+                        <div class="icon-main-feature">
+                            <i class="fas fa-memory"></i>
+                              <p>A main feature</p>
+                        </div>
+                    </div>
+                
+                    
+                          
+                    <div class="price">
+                        <label for="price-number">Precio:</label>
+                        <p id="price-number">$ <%=item.price%> MX</p>
+                    </div>
+
+                    <div>
+                        <form action="../addCar" method="post">
+                            <input name="id" class="car-input" value="<%=item.id%>">
+                            <button class="cta-add-to-car">
+                                <i class="fas fa-cart-plus"></i>
+                                Agregar al carrito
+                            </button>
+                        </form>
+                    </div>
+
+                    <a href="/products/edit/<%= item.id %>">
+                        <button>Editar</button>
+                    </a>
+                    <form action="/products/delete/<%= item.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                        <button type="submit" class="action-button delete">ELIMINAR</button>
+                    </form>
+                </div>
+                
+            </main>
+        </section>
+
+        
+        <section class="product-description">
+            <h2 class="title">
+                Descripción del producto
+            </h2>
+            <div class="text-description">
+                <p>
+                    <%=item.description%>
+                </p>
+            </div>
+        </section>
+
+        <% if(item.specifications !== undefined){ %>     
+        <section class="specficactions">
+            <h2 class="title">
+                Especificaciones técnicas
+            </h2>
+            <div>
+                <table class="specifications-table">
+                    <colgroup>
+                        <col class="name-of-feature">                                            
+                    </colgroup>
+                    <tr>
+                        <th>Característica</th>
+                        <th>Descripción</th>
+                    </tr>
+                    <% item.specifications.forEach(row => {  %>               
+                    <tr>
+                        <td><%= row.feature %></td>
+                        <td><%= row.description %></td>
+                    </tr>
+                    <% }) %>
+                </table>
+            </div>
+        </section>
+        <% } %>
+       
+        
+
+        <%- include("../partials/recommendations") %>
+
+        <%- include("../partials/reviewsList") %>
+     
+      
+    </main>
+
+    <%- include('../partials/footer')%>
+    
+</body>
+</html>

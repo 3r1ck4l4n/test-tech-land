@@ -1,0 +1,67 @@
+<header>
+    <div class="header-top">
+      <div class="container-logo">
+        <a href="/home"><img src="/images/techLand2White.png" class="tech-land-logo" alt="tech-land-logo" /></a>
+      </div>
+
+      <div class="search-box">
+        <form action="#" method="POST">
+          <input type="text" name="search" id="search" placeholder="Search for anything" required /><button type=""
+            class="button-search">
+            <i class="fab fa-searchengin fa-lg"></i>
+          </button>
+        </form>
+      </div>
+      <div class="shoppingCart">
+        <a href="/productCart"><i class="fas fa-shopping-cart fa-lg"></i></a>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <ul class="service-options">
+        <li><a href="#">Novedades</a></li>
+        <li><a href="/products">Todos los productos</a></li>
+        <li><a href="#">Favoritos</a></li>
+        <li><a href="#">Centro de información</a></li>
+        <li><a href="/products/create">Vender</a></li>
+      </ul>
+      
+      <ul class="user-options"> 
+        <% if(locals.isLogged){ %>
+          <li>
+            <a href="/users/profile"><img src="<%= locals.userLogged.profileImage %>" alt="" style="width: 24px; height: 24px; border-radius: 50%;">Hola <%= locals.userLogged.user %> </a>
+          </li>
+          <li>
+            <a href="/users/logout">cerrar sesión</a>
+          </li>
+        <% } else{ %>
+          <li>
+            <a href="/users/login">Log in <i class="fas fa-sign-in-alt"></i></a>
+          </li>
+          <li>
+            <a href="/users/register">Sign up <i class="fas fa-user-plus"></i></a>
+          </li>
+        <% } %>
+          
+      
+         
+        
+        
+        <li>
+          <div class="search-box-mobile">
+            <form action="#" method="POST">
+              <input type="text" name="search" id="search" placeholder="Search for anything" required /><button type=""
+                class="button-search">
+                <i class="fab fa-searchengin fa-lg"></i>
+              </button>
+            </form>
+          </div>
+        </li>
+      </ul>
+      <div class="shoppingCart-mobile">
+        <a href="/productCart"><i class="fas fa-shopping-cart fa-lg"></i></a>
+      </div>
+    </nav>
+    <div class="container-barMenu">
+      <i class="fas fa-bars barMenu fa-lg"></i>
+    </div>
+  </header>

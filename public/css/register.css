@@ -1,0 +1,23 @@
+.errors {
+    color: white;
+    background-color: rgba(197,11,17,0.71);
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+@media(min-width: 560px){
+
+    .user-options{
+        display: none !important;
+    }
+
+    .service-options{
+        width: 100% !important;
+    }
+    .container-barMenu
+    {
+        display:none;
+    }
+}

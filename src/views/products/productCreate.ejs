@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head") %>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
+      rel="stylesheet"
+    />    
+    <link href="/css/normalize.css" rel="stylesheet" />    
+    <link href="/css/home/formStyles.css" rel=stylesheet>  
+    <link href="/css/product/productCreate.css" rel="stylesheet" />  
+    <script async src="/js/preview.js"></script>
+    <title>Agregar producto</title>
+  </head>
+  <body>
+    <header>
+      <%- include('../partials/header')%> 
+    </header>
+
+    <main>
+      <section>
+        <h1> <i class="fas fa-plus-circle"></i> Agregar producto</h1>
+        <form action="/products" method="POST" enctype="multipart/form-data">
+          <section class = columns>
+            <!-- <img 
+              src="/images/home/i9.jpg" 
+              alt="product-image" 
+              class = "product-image"
+            >  -->
+            <!-- <label for="product-image">Imagen del producto</label> -->
+            <!-- <div class = "preview">
+                <input type="file" name="product-image" id="file">
+            </div> -->
+            <div id = "preview">
+            </div> 
+          </section>
+          <section class = columns>
+          <div>
+            <label for="name">Nombre del producto</label>
+            <input
+              size="20px"
+              type="text"
+              class="input"
+              id="fname"
+              name="name"
+              placeholder="  Nombre del producto"
+              required
+              minlength="3"
+            />
+          </div>
+          <div>
+            <label for="description">Descripción</label>
+            <textarea name="description" id="description" cols="4" class="input-description"></textarea>
+          </div>
+          <label for="product-image">Imagen del producto</label>
+              <input type="file" name="product-image" id="file" class = "input-image" />
+          <div>
+            <label for="category">Categoría</label>
+            <select name="category" id="category" class="input">
+                <option value="Perifericos">Perifericos</option>
+                <option value="Equipos de computo"> Equipos de computo</option>
+                <option value="Laptops"> Laptops</option>
+                <option value="Monitores"> Monitores</option>
+                <option value="Procesadores">Procesadores</option>
+                <option value="Tarjetas madre"> Tarjetas Madre</option>
+                <option value="Darjetas de video">Tarjetas de video</option>
+                <option value="Disipadores y enfriamiento">Disipadores y Enfriamiento</option>
+                <option value="PC Gamer">PC Gamer</option>
+                <option value="Almacenamiento">Almacenamiento</option>
+                <option value="Memorias">Memorias</option>
+                <option value="Otra">Otra</option>
+
+            </select>                
+          </div>
+          <div> 
+            <label for="brand">Marca</label>
+            <select name="brand" id="brand" class="input">
+                <option value="Acer">Acer</option>
+                <option value="Adata">Adata</option>
+                <option value="AlienWare">AlienWare</option>
+                <option value="AMD">AMD</option>
+                <option value="Aorus">Aorus</option>
+                <option value="Apple">Apple</option>
+                <option value="Asus">Asus</option>
+                <option value="Dell">Dell</option>
+                <option value="EVGA">EVGA</option>
+                <option value="Gigabyte">Gigabyte</option>
+                <option value="HP">HP</option>
+                <option value="Huawei">Huawei</option>
+                <option value="HyperX">HyperX</option>
+                <option value="Intel">Intel</option>
+                <option value="Kingston">Kingston</option>
+                <option value="Lenovo">Lenovo</option>
+                <option value="MSI">MSI</option>
+                <option value="Nvidia">Nvidia</option>
+                <option value="Samsung">Samsung</option>
+                <option value="Sony">Sony</option>
+                <option value="Otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-input"> 
+            <label for="price">Precio</label>
+            <input type="number" name="price" id="price" class="input" placeholder="Precio" required>
+          </div>
+          <div class="form-input">
+            <label for="type">Tipo: </label>
+            <select name="type" id="type" class= "input">             -->
+              <option value="Destacados" selected>Destacados</option>
+              <option value="Agregados recientemente">Agregados recientemente</option>
+              <option value="Más vendidos">Más vendidos</option>
+              <option value="En oferta">En oferta</option>
+            </select>
+          </div>
+          <button type="submit" class="register-button">Enviar</button>
+        </section>
+        </form>
+      </section>
+    </main>
+
+    <%- include('../partials/footer')%>
+    <!-- <footer>
+        <div class="social-networks">
+        <i class="fab fa-instagram fa-3x"></i>
+        <i class="fab fa-facebook fa-3x"></i>
+        <i class="fab fa-whatsapp fa-3x"></i> 
+        </div>
+        <nav>
+            <ul class="navbar">
+                <li><a href="#">Conócenos</a></li>
+                <li><a href="#">Cuenta</a></li>
+                <li><a href="#">Mi pedido</a></li>
+            </ul>
+        
+            <img src="/images/TechLand2White.png" class="logo" alt="logo de la empresa">
+        
+            <ul class="navbar">
+                <li><a href="#">Contáctanos</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Ayuda e información</a></li>
+            </ul>
+        </nav>  
+    </footer> -->
+  </body>
+</html>
